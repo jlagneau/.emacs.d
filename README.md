@@ -6,6 +6,7 @@ MELPA packages :
 * magit
 * yasnippet
 * Tuareg (Ocaml)
+* PHP
 
 Personnal packages :
 
