@@ -1,0 +1,49 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/jlagneau/Works/Ocaml/Pisc-Ocaml/d06/" . "ex02/")
+ ("/home/jlagneau/Works/Ocaml/Pisc-Ocaml/d05/" . "ex06/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/jlagneau/.emacs.d/conf/"
+ "/home/jlagneau/Works/Ocaml/Pisc-Ocaml/d06/ex03/"
+ "/home/jlagneau/Works/Ocaml/Pisc-Ocaml/d06/ex02/"
+ "/home/jlagneau/Works/Ocaml/Pisc-Ocaml/d05/ex06/"
+ "/home/jlagneau/Works/Ocaml/Pisc-Ocaml/d05/ex01/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "conf.el"
+ "ex03.ml"
+ "ex02.ml"
+ "examples_of_file.ml"
+ "ft_ref.ml"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/jlagneau/.emacs.d/conf/" (22081 54327 486258 954000) "shortcut.el" "theme.el" "snippet.el" "./" "../" "git.el" "conf.el")
+
+ ("/home/jlagneau/.emacs.d/" (22082 4575 622925 623000) "ido.last" "init.el" "packages/" "./" "elpa/" "abbrev_defs" "conf/" "projectile-bookmarks.eld" "../" ".git/" "README.md" "auto-save-list/")
+
+ ("/home/jlagneau/Works/Ocaml/Pisc-Ocaml/d06/" (22081 55297 429592 288000) "ex00/" "ex02/" "./" "ex03/" "../" ".git/" "ex01/")
+
+ ("/home/jlagneau/Works/Ocaml/Pisc-Ocaml/d06/ex03/" (22081 64101 669592 289000) "./" "../" "ex03.ml")
+
+ ("/home/jlagneau/Works/Ocaml/Pisc-Ocaml/d05/ex06/" (22081 43691 302925 623000) "./" "test.csv" "../" "ionosphere.test.csv" "ionosphere.train.csv" "examples_of_file.ml")
+
+ ("/home/jlagneau/Works/Ocaml/Pisc-Ocaml/d06/ex02/" (22081 55133 372925 623000) "./" "../" "ex02.ml")
+
+ ("/home/jlagneau/Works/Ocaml/Pisc-Ocaml/d06/ex01/" (22081 51279 19592 289000) "./" "../" "ex01.ml")
+
+ ("/home/jlagneau/Works/Ocaml/Pisc-Ocaml/d05/ex01/" (22081 43100 696258 955000) "./" "../" "ft_ref.ml")
+
+ ("/home/jlagneau/Works/Ocaml/Pisc-Ocaml/d05/" (22081 42792 332925 623000) "ex00/" "ex05/" "ex02/" "./" "ex03/" "../" "ex06/" ".git/" "ex01/" "ex04/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
