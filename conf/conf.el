@@ -64,3 +64,6 @@
 		(and linum-disable-starred-buffers
 			(string-match "*" (buffer-name))))
 (linum-mode 1)))
+
+;; PHP CS
+(add-hook 'php-mode-hook 'php-enable-symfony2-coding-style)
