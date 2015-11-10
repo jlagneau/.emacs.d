@@ -1,1 +1,0 @@
-("~/.emacs.d/" "~/Works/Ocaml/Pisc-Ocaml/d06/")
