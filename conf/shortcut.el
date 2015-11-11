@@ -23,3 +23,4 @@
 (global-set-key (kbd "<f9>") 'magit-status)
 (global-set-key (kbd "<f12>") 'projectile-find-file)
 (global-set-key (kbd "TAB") 'self-insert-command)
+(global-set-key (kbd "C-c c") 'mc/edit-lines)
