@@ -13,6 +13,7 @@ MELPA packages :
 * Tuareg (Ocaml)
 * PHP
 * YAML
+* RESTclient
 
 Personnal packages :
 
