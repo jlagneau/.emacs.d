@@ -13,6 +13,9 @@
 (load "comments.el")
 (load "header.el")
 
+;; Theme
+(load-theme 'monokai t)
+
 ;; Auto completion on buffers
 (ido-mode 1)
 

@@ -11,7 +11,4 @@
 
 ;; Add configurations
 (load "conf.el")
-(load "theme.el")
-(load "snippet.el")
-(load "git.el")
 (load "shortcut.el")
