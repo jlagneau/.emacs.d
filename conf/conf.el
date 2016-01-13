@@ -40,7 +40,7 @@
  backward-delete-function nil)
 ;; WhiteSpace
 (global-whitespace-mode 1)
-(setq whitespace-style '(empty face lines-tail trailing))
+(setq whitespace-style '(empty face trailing))
 ;; Saves
 (setq backup-inhibited t)
 (setq auto-save-default nil)
@@ -82,7 +82,7 @@
 ;; C CS
 (defun my-c-mode-hook ()
   (setq indent-tabs-mode t)
-  (setq whitespace-style '(empty face trailing indentation
+  (setq whitespace-style '(empty face trailing indentation lines-tail
                                  space-before-tab space-after-tab)))
 (add-hook 'c-mode-hook 'my-c-mode-hook)
 ;; PHP CS

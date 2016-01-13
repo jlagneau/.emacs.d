@@ -3,11 +3,12 @@
 
 (setq mc/cmds-to-run-for-all
       '(
-		c-electric-semi&comma
-		kill-region
-		yaml-electric-dash-and-dot
-		))
+        c-electric-semi&comma
+        kill-region
+        tuareg-electric-rp
+        yaml-electric-dash-and-dot
+        ))
 
 (setq mc/cmds-to-run-once
       '(
-		))
+        ))
