@@ -1,5 +1,10 @@
 ;; Add 42 header plugins path
 (add-to-list 'load-path "~/.emacs.d/packages/42headers/")
+
+;; Add opam emacs directory to the load-path
+(setq opam-share (substring (shell-command-to-string "opam config var share 2> /dev/null") 0 -1))
+(add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
+
 ;; Header 42
 (load "list.el")
 (load "string.el")
@@ -7,17 +12,22 @@
 (load "header.el")
 
 ;; Require
+(require 'auto-complete)
+(require 'auto-complete-config)
 (require 'ansi-color)
+(require 'yasnippet)
 (require 'whitespace)
 (require 'package)
+(require 'merlin)
 (require 'ido)
 
 ;; Theme
 (load-theme 'monokai t)
 ;; UI
 (tool-bar-mode -1)
-(scroll-bar-mode -1)
 (setq inhibit-splash-screen t)
+(when (display-graphic-p)
+   	(scroll-bar-mode -1))
 (menu-bar-mode -1)
 (column-number-mode 1)
 (setq split-height-threshold 9999)
@@ -29,6 +39,8 @@
 ;; Matching parenthesis and alikes.
 (electric-pair-mode 1)
 (show-paren-mode t)
+;; Snippets
+(yas-global-mode t)
 ;; Indenting
 (setq-default
  c-default-style "linux"
@@ -79,6 +91,10 @@
 (defun colorize-compilation-buffer ()
   (ansi-color-apply-on-region (point-min) (point-max)))
 (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
+;; Auto complete
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(ac-config-default)
+(global-auto-complete-mode t)
 ;; C CS
 (defun my-c-mode-hook ()
   (setq indent-tabs-mode t)
@@ -90,3 +106,11 @@
   (setq whitespace-line-column 120))
 (add-hook 'php-mode-hook 'my-php-mode-hook)
 (add-hook 'php-mode-hook 'php-enable-symfony2-coding-style)
+;; Ocaml
+;; Start merlin on ocaml files
+(add-hook 'tuareg-mode-hook 'merlin-mode t)
+(add-hook 'caml-mode-hook 'merlin-mode t)
+;; Enable auto-complete
+(setq merlin-use-auto-complete-mode 'easy)
+;; Use opam switch to lookup ocamlmerlin binary
+(setq merlin-command 'opam)

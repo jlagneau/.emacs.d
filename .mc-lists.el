@@ -4,7 +4,9 @@
 (setq mc/cmds-to-run-for-all
       '(
         c-electric-semi&comma
+        electric-pair-delete-pair
         kill-region
+        merlin-error-next
         tuareg-electric-rp
         yaml-electric-dash-and-dot
         ))

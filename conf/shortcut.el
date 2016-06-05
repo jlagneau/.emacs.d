@@ -32,3 +32,10 @@
 ;; Packages shorcuts
 (global-set-key (kbd "<f9>") 'magit-status)
 (global-set-key (kbd "<f12>") 'projectile-find-file)
+;; Snippet
+(define-key yas-minor-mode-map (kbd "<tab>") nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+(define-key yas-minor-mode-map (kbd "<backtab>") 'yas-expand)
+;; Autocomplete
+(ac-set-trigger-key "TAB")
+(ac-set-trigger-key "<tab>")
