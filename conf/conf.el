@@ -17,6 +17,7 @@
 (require 'ansi-color)
 (require 'yasnippet)
 (require 'whitespace)
+(require 'powerline)
 (require 'package)
 (require 'merlin)
 (require 'ido)
@@ -32,6 +33,11 @@
 (column-number-mode 1)
 (setq split-height-threshold 9999)
 (setq split-width-threshold 250)
+(set-default 'truncate-lines t)
+(setq frame-title-format "%b")
+;; Powerline
+(when (display-graphic-p)
+	(powerline-default-theme))
 ;; Auto completion on command buffer
 (ido-mode 1)
 ;; Project
