@@ -4,17 +4,4 @@ Personnal emacs config
 
 ---
 
-MELPA packages :
-
-* Projectile
-* magit
-* yasnippet
-* multiple-cursors
-* Tuareg (Ocaml)
-* PHP
-* YAML
-* RESTclient
-
-Personnal packages :
-
-* 42 Headers
+An exhaustive list of packages used in this configuration can be found in [this file](https://github.com/jlagneau/.emacs.d/blob/master/Cask)
