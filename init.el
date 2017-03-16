@@ -6,7 +6,7 @@
 ;    By: jlagneau <jlagneau@student.42.fr>          +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2016/01/05 10:58:21 by jlagneau          #+#    #+#              ;
-;    Updated: 2017/03/16 05:23:16 by jlagneau         ###   ########.fr        ;
+;    Updated: 2017/03/16 05:45:45 by jlagneau         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -27,21 +27,6 @@
 ;; https://github.com/rdallasgray/pallet
 (require 'pallet)
 (pallet-mode t)
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (rainbow-mode yasnippet yaml-mode twig-mode tuareg restclient projectile powerline php-mode pandoc pallet multiple-cursors mouse+ monokai-theme minimap markdown-mode magit-gitflow cask-package-toolset cask-mode auto-complete-c-headers))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
 ;; Add configuration path
 (add-to-list 'load-path "~/.emacs.d/conf/")
