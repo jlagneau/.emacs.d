@@ -2,6 +2,8 @@
 (source "marmalade" "http://marmalade-repo.org/packages/")
 (source "melpa" "http://melpa.milkbox.net/packages/")
 
+(depends-on "all-the-icons")
+(depends-on "all-the-icons-dired")
 (depends-on "ansi")
 (depends-on "async")
 (depends-on "auto-complete")
@@ -23,6 +25,7 @@
 (depends-on "monokai-theme")
 (depends-on "mouse+")
 (depends-on "multiple-cursors")
+(depends-on "neotree")
 (depends-on "package-build")
 (depends-on "pallet")
 (depends-on "pandoc")

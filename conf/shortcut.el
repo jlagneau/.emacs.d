@@ -6,7 +6,7 @@
 ;    By: jlagneau <jlagneau@student.42.fr>          +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2017/03/16 05:09:17 by jlagneau          #+#    #+#              ;
-;    Updated: 2017/03/16 05:09:20 by jlagneau         ###   ########.fr        ;
+;    Updated: 2017/03/19 04:22:40 by jlagneau         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -26,6 +26,7 @@
  '(lambda ()
 	(interactive)
 	(scroll-up 1)))
+
 ;; Global Shorcut
 (global-set-key (kbd "C-A") 'undo)
 (global-set-key (kbd "C-c h") 'replace-string)
@@ -41,6 +42,7 @@
 (global-set-key (kbd "C-c c") 'mc/edit-lines)
 (global-unset-key (kbd "C-<down-mouse-1>"))
 (global-set-key (kbd "C-<mouse-1>") 'mc/add-cursor-on-click)
-;; Packages shorcuts
+;; Other packages shortcut
 (global-set-key (kbd "<f9>") 'magit-status)
 (global-set-key (kbd "<f12>") 'projectile-find-file)
+(global-set-key (kbd "<f8>") 'neotree-project-dir)

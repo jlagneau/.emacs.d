@@ -6,7 +6,7 @@
 ;    By: jlagneau </var/spool/mail/jlagneau>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2017/03/16 04:07:03 by jlagneau          #+#    #+#              ;
-;    Updated: 2017/03/16 05:24:54 by jlagneau         ###   ########.fr        ;
+;    Updated: 2017/03/19 04:53:29 by jlagneau         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -99,6 +99,27 @@
 ;; Project management
 (require 'projectile)
 (projectile-global-mode)
+
+;; Project tree
+(require 'neotree)
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+(setq neo-smart-open t)
+(setq neo-show-hidden-files t)
+(setq neo-window-fixed-size nil)
+(setq neo-window-width 30)
+(defun neotree-project-dir ()
+  "Open NeoTree using the git root."
+  (interactive)
+  (let ((project-dir (projectile-project-root))
+        (file-name (buffer-file-name)))
+    (neotree-toggle)
+    (if project-dir
+        (if (neo-global--window-exists-p)
+            (progn
+              (neotree-dir project-dir)
+              (neotree-find file-name)))
+      (message "Could not find git project root."))))
+
 
 ;; Snippets
 (require 'yasnippet)
