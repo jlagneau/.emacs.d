@@ -6,7 +6,7 @@
 ;    By: jlagneau </var/spool/mail/jlagneau>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2017/03/16 04:07:03 by jlagneau          #+#    #+#              ;
-;    Updated: 2017/03/19 04:53:29 by jlagneau         ###   ########.fr        ;
+;    Updated: 2017/03/19 05:04:51 by jlagneau         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -32,8 +32,8 @@
    	(scroll-bar-mode -1))
 (menu-bar-mode -1)
 (column-number-mode 1)
-(setq split-height-threshold 9999)
-(setq split-width-threshold 250)
+(setq split-height-threshold nil)
+(setq split-width-threshold 120)
 (set-default 'truncate-lines t)
 (setq frame-title-format "%b")
 
