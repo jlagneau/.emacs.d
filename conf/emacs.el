@@ -6,7 +6,7 @@
 ;    By: jlagneau </var/spool/mail/jlagneau>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2017/03/16 04:07:03 by jlagneau          #+#    #+#              ;
-;    Updated: 2017/03/19 05:04:51 by jlagneau         ###   ########.fr        ;
+;    Updated: 2017/03/19 10:59:02 by jlagneau         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -23,13 +23,13 @@
 ;; Powerline
 (require 'powerline)
 (when (display-graphic-p)
-	(powerline-default-theme))
+    (powerline-default-theme))
 
 ;; UI
 (tool-bar-mode -1)
 (setq inhibit-splash-screen t)
 (when (display-graphic-p)
-   	(scroll-bar-mode -1))
+    (scroll-bar-mode -1))
 (menu-bar-mode -1)
 (column-number-mode 1)
 (setq split-height-threshold nil)
@@ -130,6 +130,15 @@
 (require 'auto-complete-config)
 (ac-config-default)
 (global-auto-complete-mode t)
+
+;; Emmet
+(require 'emmet-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook  'emmet-mode)
+
+;; Emojify
+(require 'emojify)
+(add-hook 'after-init-hook #'global-emojify-mode)
 
 ;; Compilation
 (require 'ansi-color)

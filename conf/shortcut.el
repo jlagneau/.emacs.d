@@ -6,7 +6,7 @@
 ;    By: jlagneau <jlagneau@student.42.fr>          +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2017/03/16 05:09:17 by jlagneau          #+#    #+#              ;
-;    Updated: 2017/03/19 04:22:40 by jlagneau         ###   ########.fr        ;
+;    Updated: 2017/03/19 10:55:29 by jlagneau         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -20,12 +20,12 @@
  [mouse-4]
  '(lambda ()
     (interactive)
-	(scroll-down 1)))
+    (scroll-down 1)))
 (global-set-key
  [mouse-5]
  '(lambda ()
-	(interactive)
-	(scroll-up 1)))
+    (interactive)
+    (scroll-up 1)))
 
 ;; Global Shorcut
 (global-set-key (kbd "C-A") 'undo)
