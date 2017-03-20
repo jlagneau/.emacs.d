@@ -6,7 +6,7 @@
 ;    By: jlagneau <jlagneau@student.42.fr>          +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2017/03/16 05:09:17 by jlagneau          #+#    #+#              ;
-;    Updated: 2017/03/19 10:55:29 by jlagneau         ###   ########.fr        ;
+;    Updated: 2017/03/20 11:20:21 by jlagneau         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -26,6 +26,10 @@
  '(lambda ()
     (interactive)
     (scroll-up 1)))
+
+;; MacOS with french keyboard
+(when (eq system-type 'darwin)
+  (setq mac-right-option-modifier 'none))
 
 ;; Global Shorcut
 (global-set-key (kbd "C-A") 'undo)
