@@ -1,6 +1,7 @@
 (source "gnu" "http://elpa.gnu.org/packages/")
-(source "marmalade" "http://marmalade-repo.org/packages/")
+(source "marmalade" "https://marmalade-repo.org/packages/")
 (source "melpa" "http://melpa.milkbox.net/packages/")
+(source "org" "http://orgmode.org/elpa/")
 
 (depends-on "all-the-icons")
 (depends-on "all-the-icons-dired")
