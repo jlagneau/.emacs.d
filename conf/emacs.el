@@ -6,7 +6,7 @@
 ;    By: jlagneau </var/spool/mail/jlagneau>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2017/03/16 04:07:03 by jlagneau          #+#    #+#              ;
-;    Updated: 2017/03/19 10:59:02 by jlagneau         ###   ########.fr        ;
+;    Updated: 2017/03/23 10:57:18 by jlagneau         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -150,6 +150,10 @@
 
 ;; GDB
 (setq gud-gdb-command-name "gdb -q -i=mi")
+
+;; Assembly
+(require 'nasm-mode)
+(add-to-list 'auto-mode-alist '("\\.\\(asm\\|s\\)$" . nasm-mode))
 
 ;; C CS
 (defun my-c-mode-hook ()

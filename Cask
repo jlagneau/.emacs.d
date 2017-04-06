@@ -1,7 +1,7 @@
 (source "gnu" "http://elpa.gnu.org/packages/")
-(source "marmalade" "https://marmalade-repo.org/packages/")
 (source "melpa" "http://melpa.milkbox.net/packages/")
-(source "org" "http://orgmode.org/elpa/")
+(source marmalade)
+(source org)
 
 (depends-on "all-the-icons")
 (depends-on "all-the-icons-dired")
@@ -30,6 +30,7 @@
 (depends-on "monokai-theme")
 (depends-on "mouse+")
 (depends-on "multiple-cursors")
+(depends-on "nasm-mode")
 (depends-on "neotree")
 (depends-on "package-build")
 (depends-on "pallet")
