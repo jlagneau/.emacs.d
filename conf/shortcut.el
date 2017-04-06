@@ -6,7 +6,7 @@
 ;    By: jlagneau <jlagneau@student.42.fr>          +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2017/03/16 05:09:17 by jlagneau          #+#    #+#              ;
-;    Updated: 2017/03/20 11:20:21 by jlagneau         ###   ########.fr        ;
+;    Updated: 2017/04/06 09:20:48 by jlagneau         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -14,7 +14,7 @@
 (require 'mouse)
 ;; Mouse
 (xterm-mouse-mode t)
-;(defun track-mouse (e))
+(defun track-mouse (e))
 (setq mouse-sel-mode t)
 (global-set-key
  [mouse-4]
@@ -39,7 +39,7 @@
 (global-set-key [mouse-21] 'next-buffer)
 (global-set-key (kbd "<f5>") 'compile)
 (global-set-key (kbd "<f6>") 'recompile)
-(global-set-key (kbd "TAB") 'self-insert-command)
+(global-set-key (kbd "TAB") 'tab-to-tab-stop)
 ;; Multi cursor shortcuts
 (global-set-key (kbd "C-c d") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-c D") 'mc/mark-all-like-this)
