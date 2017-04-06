@@ -6,7 +6,7 @@
 ;    By: jlagneau </var/spool/mail/jlagneau>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2017/03/16 04:07:03 by jlagneau          #+#    #+#              ;
-;    Updated: 2017/03/23 10:57:18 by jlagneau         ###   ########.fr        ;
+;    Updated: 2017/04/06 09:28:19 by jlagneau         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -79,6 +79,7 @@
     org-mode
     dired-mode
     erc-mode
+    hexl-mode
     term-mode)
   "* List of modes disabled when global linum mode is on"
   :type '(repeat (sexp :tag "Major mode"))
