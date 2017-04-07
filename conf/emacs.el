@@ -6,7 +6,7 @@
 ;    By: jlagneau </var/spool/mail/jlagneau>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2017/03/16 04:07:03 by jlagneau          #+#    #+#              ;
-;    Updated: 2017/04/06 09:28:19 by jlagneau         ###   ########.fr        ;
+;    Updated: 2017/04/07 08:07:05 by jlagneau         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -23,13 +23,13 @@
 ;; Powerline
 (require 'powerline)
 (when (display-graphic-p)
-    (powerline-default-theme))
+  (powerline-default-theme))
 
 ;; UI
 (tool-bar-mode -1)
 (setq inhibit-splash-screen t)
 (when (display-graphic-p)
-    (scroll-bar-mode -1))
+  (scroll-bar-mode -1))
 (menu-bar-mode -1)
 (column-number-mode 1)
 (setq split-height-threshold nil)
@@ -81,15 +81,16 @@
     erc-mode
     hexl-mode
     term-mode)
-  "* List of modes disabled when global linum mode is on"
+  "* List of modes disabled when global linum mode is on."
   :type '(repeat (sexp :tag "Major mode"))
   :tag " Major modes where linum is disabled: "
   :group 'linum)
 (defcustom linum-disable-starred-buffers 't
-  "* Disable buffers that have stars in them like *Gnu Emacs*"
+  "* Disable buffers that have stars in them like *Gnu Emacs*."
   :type 'boolean
   :group 'linum)
 (defun linum-on ()
+  "* Define when 'linum-mode' should be activated."
   (unless
       (or (minibufferp)
           (member major-mode linum-disabled-modes-list)
@@ -146,25 +147,48 @@
 (setq compile-command "make")
 (setq compilation-scroll-output 'first-error)
 (defun colorize-compilation-buffer ()
+  "* Colorize the compilation buffer."
   (ansi-color-apply-on-region (point-min) (point-max)))
 (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
 
 ;; GDB
 (setq gud-gdb-command-name "gdb -q -i=mi")
 
+;; Flycheck
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
 ;; Assembly
 (require 'nasm-mode)
 (add-to-list 'auto-mode-alist '("\\.\\(asm\\|s\\)$" . nasm-mode))
 
-;; C CS
-(defun my-c-mode-hook ()
+;; C
+(defun my-c-cs ()
+  "* My C Coding Style."
   (setq indent-tabs-mode t)
-  (setq whitespace-style '(empty face trailing indentation lines-tail
-                                 space-before-tab space-after-tab)))
-(add-hook 'c-mode-hook 'my-c-mode-hook)
+  (setq whitespace-style
+        '(empty face trailing indentation lines-tail
+                space-before-tab space-after-tab)))
 
-;; PHP CS
-(defun my-php-mode-hook ()
+(defun my-flycheck-c-project ()
+  "* Flycheck clang warning and informations."
+  (setq flycheck-clang-pedantic t)
+  (setq flycheck-clang-warnings (list "all" "extra")))
+
+(defun my-flycheck-c-project-include ()
+  "* Flycheck clang includes directories paths."
+  (setq flycheck-clang-include-path
+        (list
+         (expand-file-name "../libft/include")
+         (expand-file-name "../include"))))
+
+(add-hook 'c-mode-hook 'my-c-cs)
+(add-hook 'c-mode-hook 'my-flycheck-c-project)
+(add-hook 'c-mode-hook 'my-flycheck-c-project-include)
+
+;; PHP
+(defun my-php-cs ()
+  "* My PHP Coding Style."
   (setq whitespace-line-column 120))
-(add-hook 'php-mode-hook 'my-php-mode-hook)
+
+(add-hook 'php-mode-hook 'my-php-cs)
 (add-hook 'php-mode-hook 'php-enable-symfony2-coding-style)

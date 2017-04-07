@@ -20,6 +20,7 @@
 (depends-on "emojify")
 (depends-on "epl")
 (depends-on "f")
+(depends-on "flycheck")
 (depends-on "gist")
 (depends-on "git-commit")
 (depends-on "magit")
