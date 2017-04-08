@@ -3,6 +3,7 @@
 (source marmalade)
 (source org)
 
+(depends-on "ac-js2")
 (depends-on "all-the-icons")
 (depends-on "all-the-icons-dired")
 (depends-on "ansi")
@@ -23,6 +24,8 @@
 (depends-on "flycheck")
 (depends-on "gist")
 (depends-on "git-commit")
+(depends-on "js2-highlight-vars")
+(depends-on "js2-mode")
 (depends-on "magit")
 (depends-on "magit-gitflow")
 (depends-on "magit-popup")

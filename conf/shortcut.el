@@ -6,30 +6,30 @@
 ;    By: jlagneau <jlagneau@student.42.fr>          +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2017/03/16 05:09:17 by jlagneau          #+#    #+#              ;
-;    Updated: 2017/04/06 09:20:48 by jlagneau         ###   ########.fr        ;
+;    Updated: 2017/04/08 23:13:00 by jlagneau         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
-;; Require
-(require 'mouse)
 ;; Mouse
-(xterm-mouse-mode t)
-(defun track-mouse (e))
-(setq mouse-sel-mode t)
-(global-set-key
- [mouse-4]
- '(lambda ()
-    (interactive)
-    (scroll-down 1)))
-(global-set-key
- [mouse-5]
- '(lambda ()
-    (interactive)
-    (scroll-up 1)))
+(require 'mouse)
+(when (display-graphic-p nil)
+  (xterm-mouse-mode t)
+  (defun track-mouse (e))
+  (setq-default mouse-sel-mode t)
+  (global-set-key
+   [mouse-4]
+   '(lambda ()
+      (interactive)
+      (scroll-down 1)))
+  (global-set-key
+   [mouse-5]
+   '(lambda ()
+      (interactive)
+      (scroll-up 1))))
 
-;; MacOS with french keyboard
+;; MacOS disable right Alt key
 (when (eq system-type 'darwin)
-  (setq mac-right-option-modifier 'none))
+  (setq-default mac-right-option-modifier 'none))
 
 ;; Global Shorcut
 (global-set-key (kbd "C-A") 'undo)
@@ -47,6 +47,6 @@
 (global-unset-key (kbd "C-<down-mouse-1>"))
 (global-set-key (kbd "C-<mouse-1>") 'mc/add-cursor-on-click)
 ;; Other packages shortcut
+(global-set-key (kbd "<f8>") 'neotree-project-dir)
 (global-set-key (kbd "<f9>") 'magit-status)
 (global-set-key (kbd "<f12>") 'projectile-find-file)
-(global-set-key (kbd "<f8>") 'neotree-project-dir)

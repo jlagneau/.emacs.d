@@ -6,7 +6,7 @@
 ;    By: jlagneau </var/spool/mail/jlagneau>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2017/03/16 04:07:03 by jlagneau          #+#    #+#              ;
-;    Updated: 2017/04/07 08:07:05 by jlagneau         ###   ########.fr        ;
+;    Updated: 2017/04/08 22:55:02 by jlagneau         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -70,8 +70,9 @@
 (ido-mode 1)
 
 ;; Linum mode
+(require 'linum)
 (global-linum-mode 1)
-(setq linum-format " %4d | ")
+(setq-default  linum-format " %4d | ")
 (defcustom linum-disabled-modes-list
   '(eshell-mode
     wl-summary-mode
@@ -100,7 +101,7 @@
 
 ;; Project management
 (require 'projectile)
-(projectile-global-mode)
+(projectile-mode)
 
 ;; Project tree
 (require 'neotree)
@@ -152,7 +153,7 @@
 (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
 
 ;; GDB
-(setq gud-gdb-command-name "gdb -q -i=mi")
+(setq-default gud-gdb-command-name "gdb -q -i=mi")
 
 ;; Flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
@@ -171,12 +172,12 @@
 
 (defun my-flycheck-c-project ()
   "* Flycheck clang warning and informations."
-  (setq flycheck-clang-pedantic t)
-  (setq flycheck-clang-warnings (list "all" "extra")))
+  (setq-default flycheck-clang-pedantic t)
+  (setq-default flycheck-clang-warnings (list "everything" "no-cast-qual" "no-unused-macros")))
 
 (defun my-flycheck-c-project-include ()
   "* Flycheck clang includes directories paths."
-  (setq flycheck-clang-include-path
+  (setq-default flycheck-clang-include-path
         (list
          (expand-file-name "../libft/include")
          (expand-file-name "../include"))))
@@ -192,3 +193,8 @@
 
 (add-hook 'php-mode-hook 'my-php-cs)
 (add-hook 'php-mode-hook 'php-enable-symfony2-coding-style)
+
+;; JS
+(require 'js2-mode)
+(setq-default js2-basic-offset 2)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
