@@ -22,7 +22,7 @@
 ;    By: login____ <mail_______@student.42.fr>      +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: yyyy/mm/dd 15:27:11 by login____         #+#    #+#              ;
-;    Updated: 2014/02/25 00:14:13 by soyel            ###   ########.fr        ;
+;    Updated: yyyy/mm/dd 23:20:25 by login____        ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -253,13 +253,14 @@
     (if (buffer-modified-p)
         (progn
           (goto-char (point-min))
-          (if (search-forward "Updated" nil t)
+          (if (search-forward "   Updated: " nil t)
+            (when (eq (what-line) 9)
               (progn
                 (delete-region
                  (progn (beginning-of-line) (point))
                  (progn (end-of-line) (point)))
 				(header-insert-line-09)
-                (message "Header up to date."))))))
+                (message "Header up to date.")))))))
   nil)
 
 
