@@ -25,25 +25,9 @@
 (when (display-graphic-p)
   (powerline-default-theme))
 
-;; UI
-(tool-bar-mode -1)
-(setq inhibit-splash-screen t)
-(when (display-graphic-p)
-  (scroll-bar-mode -1))
-(menu-bar-mode -1)
-(column-number-mode 1)
-(setq split-height-threshold nil)
-(setq split-width-threshold 120)
-(set-default 'truncate-lines t)
-(setq frame-title-format "%b")
-
 ;; Rainbow mode
 (require 'rainbow-mode)
 (add-hook 'css-mode-hook 'rainbow-mode)
-
-;; Matching parenthesis and alikes.
-(electric-pair-mode 1)
-(show-paren-mode t)
 
 ;; Indenting
 (setq-default
@@ -55,14 +39,7 @@
  c-tab-always-indent t
  backward-delete-function nil)
 
-;; WhiteSpace
-(require 'whitespace)
-(global-whitespace-mode 1)
-(setq whitespace-style '(empty face trailing))
-
 ;; Saves
-(setq backup-inhibited t)
-(setq auto-save-default nil)
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;; ido completion system
@@ -71,8 +48,6 @@
 
 ;; Linum mode
 (require 'linum)
-(global-linum-mode 1)
-(setq-default  linum-format " %4d | ")
 (defcustom linum-disabled-modes-list
   '(eshell-mode
     wl-summary-mode
@@ -108,7 +83,7 @@
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 (defun neotree-project-dir ()
-  "Open NeoTree using the git root."
+  "* Open NeoTree using the git root."
   (interactive)
   (let ((project-dir (projectile-project-root))
         (file-name (buffer-file-name)))
@@ -119,7 +94,6 @@
               (neotree-dir project-dir)
               (neotree-find file-name)))
       (message "Could not find git project root."))))
-
 
 ;; Snippets
 (require 'yasnippet)
@@ -148,9 +122,6 @@
   "* Colorize the compilation buffer."
   (ansi-color-apply-on-region (point-min) (point-max)))
 (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
-
-;; GDB
-(setq-default gud-gdb-command-name "gdb -q -i=mi")
 
 ;; Flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
