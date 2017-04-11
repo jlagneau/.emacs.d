@@ -15,14 +15,31 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(auto-save-default nil)
+ '(column-number-mode t)
+ '(electric-pair-mode t)
+ '(flycheck-clang-include-path (quote ("../libft/include" "../include")))
+ '(flycheck-clang-pedantic t)
+ '(flycheck-clang-warnings (quote ("everything" "no-cast-qual" "no-unused-macros")))
+ '(global-linum-mode t)
+ '(gud-gdb-command-name "gdb -q -i=mi")
+ '(ido-mode (quote both) nil (ido))
+ '(inhibit-startup-screen t)
+ '(inhibit-splash-screen t)
+ '(linum-format " %4d | ")
+ '(make-backup-files nil)
+ '(menu-bar-mode nil)
+ '(neo-smart-open t)
  '(package-selected-packages
    (quote
-    (yasnippet yaml-mode web-mode twig-mode tuareg restclient rainbow-mode
-               projectile powerline phpunit php-mode pandoc pallet neotree
-               nasm-mode multiple-cursors mouse+ monokai-theme minimap
-               markdown-mode magit-gitflow js2-highlight-vars gist flycheck
-               emojify emmet-mode composer cask-package-toolset cask-mode
-               auto-complete-c-headers all-the-icons-dired ac-js2))))
+    (yasnippet yaml-mode web-mode twig-mode tuareg restclient rainbow-mode projectile powerline phpunit php-mode pandoc pallet neotree nasm-mode multiple-cursors mouse+ monokai-theme minimap markdown-mode magit-gitflow js2-highlight-vars gist flycheck emojify emmet-mode composer cask-package-toolset cask-mode auto-complete-c-headers all-the-icons-dired ac-js2)))
+ '(projectile-mode t nil (projectile))
+ '(scroll-bar-mode nil)
+ '(show-paren-mode t)
+ '(split-height-threshold nil)
+ '(split-width-threshold 120)
+ '(tool-bar-mode nil)
+ '(truncate-lines t))
  '(neo-show-hidden-files t)
  '(neo-show-updir-line nil)
  '(neo-vc-integration (quote (face)))
@@ -33,6 +50,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(linum ((t (:foreground "#8F908A" :underline nil))))
  '(neo-vc-added-face ((t (:foreground "green"))))
  '(neo-vc-default-face ((t (:foreground "gainsboro"))))
  '(neo-vc-ignored-face ((t (:foreground "dark gray"))))
