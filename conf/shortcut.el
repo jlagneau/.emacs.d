@@ -49,4 +49,5 @@
 ;; Other packages shortcut
 (global-set-key (kbd "<f8>") 'neotree-project-dir)
 (global-set-key (kbd "<f9>") 'magit-status)
-(global-set-key (kbd "<f12>") 'projectile-find-file)
+(global-set-key (kbd "C-c C-f") 'projectile-find-file)
+(global-set-key (kbd "<f12>") 'projectile-switch-project)
