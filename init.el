@@ -35,3 +35,7 @@
 (load "font.el")
 (load "emacs.el")
 (load "shortcut.el")
+
+;; Customize file location
+(setq custom-file "~/.emacs.d/conf/custom.el")
+(load custom-file 'noerror)

@@ -106,10 +106,7 @@
 ;; Project tree
 (require 'neotree)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-(setq neo-smart-open t)
-(setq neo-show-hidden-files t)
-(setq neo-window-fixed-size nil)
-(setq neo-window-width 30)
+
 (defun neotree-project-dir ()
   "Open NeoTree using the git root."
   (interactive)
