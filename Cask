@@ -24,6 +24,7 @@
 (depends-on "flycheck")
 (depends-on "gist")
 (depends-on "git-commit")
+(depends-on "highlight-indent-guides")
 (depends-on "js2-highlight-vars")
 (depends-on "js2-mode")
 (depends-on "magit")

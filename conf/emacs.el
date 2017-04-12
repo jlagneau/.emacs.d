@@ -39,6 +39,9 @@
  c-tab-always-indent t
  backward-delete-function nil)
 
+;; Indent guides
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+
 ;; Saves
 (add-hook 'before-save-hook 'whitespace-cleanup)
 

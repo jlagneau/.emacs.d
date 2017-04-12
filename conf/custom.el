@@ -1,4 +1,4 @@
-;;; package --- custom.el******************************************************;
+;;; package --- custom.el *****************************************************;
 ;                                                                              ;
 ;                                                         :::      ::::::::    ;
 ;    custom.el                                          :+:      :+:    :+:    ;
@@ -28,6 +28,8 @@
  '(global-linum-mode t)
  '(global-whitespace-mode t)
  '(gud-gdb-command-name "gdb -q -i=mi")
+ '(highlight-indent-guides-auto-character-face-perc 8)
+ '(highlight-indent-guides-method (quote character))
  '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)
  '(linum-format " %4d | ")
@@ -41,7 +43,7 @@
  '(neo-window-width 35)
  '(package-selected-packages
    (quote
-    (yasnippet yaml-mode web-mode twig-mode tuareg restclient rainbow-mode projectile powerline phpunit php-mode pandoc pallet neotree nasm-mode multiple-cursors mouse+ monokai-theme minimap markdown-mode magit-gitflow js2-highlight-vars gist flycheck emojify emmet-mode composer cask-package-toolset cask-mode auto-complete-c-headers all-the-icons-dired ac-js2)))
+    (highlight-indent-guides yasnippet yaml-mode web-mode twig-mode tuareg restclient rainbow-mode projectile powerline phpunit php-mode pandoc pallet neotree nasm-mode multiple-cursors mouse+ monokai-theme minimap markdown-mode magit-gitflow js2-highlight-vars gist flycheck emojify emmet-mode composer cask-package-toolset cask-mode auto-complete-c-headers all-the-icons-dired ac-js2)))
  '(projectile-mode t nil (projectile))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -58,6 +60,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(highlight-indent-guides-character-face ((t (:foreground "#414339"))))
  '(linum ((t (:foreground "#8F908A" :underline nil))))
  '(neo-vc-added-face ((t (:foreground "green"))))
  '(neo-vc-default-face ((t (:foreground "gainsboro"))))
