@@ -254,13 +254,12 @@
         (progn
           (goto-char (point-min))
           (if (search-forward "   Updated: " nil t)
-            (when (eq (what-line) 9)
               (progn
                 (delete-region
                  (progn (beginning-of-line) (point))
                  (progn (end-of-line) (point)))
 				(header-insert-line-09)
-                (message "Header up to date.")))))))
+                (message "Header up to date."))))))
   nil)
 
 
