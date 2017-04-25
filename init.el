@@ -6,7 +6,7 @@
 ;    By: jlagneau <jlagneau@student.42.fr>          +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2016/01/05 10:58:21 by jlagneau          #+#    #+#              ;
-;    Updated: 2017/03/19 10:55:55 by jlagneau         ###   ########.fr        ;
+;    Updated: 2017/04/25 22:10:47 by jlagneau         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -32,7 +32,6 @@
 (add-to-list 'load-path "~/.emacs.d/conf/")
 
 ;; Add configurations
-(load "font.el")
 (load "emacs.el")
 (load "shortcut.el")
 

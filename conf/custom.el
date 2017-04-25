@@ -6,7 +6,7 @@
 ;    By: jlagneau <jlagneau@student.42.fr>          +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2017/04/11 10:28:01 by jlagneau          #+#    #+#              ;
-;    Updated: 2017/04/11 10:28:01 by jlagneau         ###   ########.fr        ;
+;    Updated: 2017/04/26 00:19:21 by jlagneau         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -21,15 +21,11 @@
  ;; If there is more than one, they won't work right.
  '(auto-save-default nil)
  '(column-number-mode t)
+ '(editorconfig-mode t)
  '(electric-pair-mode t)
- '(flycheck-clang-include-path (quote ("../libft/include" "../include")))
- '(flycheck-clang-pedantic t)
- '(flycheck-clang-warnings (quote ("everything" "no-cast-qual" "no-unused-macros")))
  '(global-linum-mode t)
  '(global-whitespace-mode t)
  '(gud-gdb-command-name "gdb -q -i=mi")
- '(highlight-indent-guides-auto-character-face-perc 8)
- '(highlight-indent-guides-method (quote character))
  '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)
  '(linum-format " %4d | ")
@@ -43,7 +39,7 @@
  '(neo-window-width 35)
  '(package-selected-packages
    (quote
-    (highlight-indent-guides yasnippet yaml-mode web-mode twig-mode tuareg restclient rainbow-mode projectile powerline phpunit php-mode pandoc pallet neotree nasm-mode multiple-cursors mouse+ monokai-theme minimap markdown-mode magit-gitflow js2-highlight-vars gist flycheck emojify emmet-mode composer cask-package-toolset cask-mode auto-complete-c-headers all-the-icons-dired ac-js2)))
+    (editorconfig yasnippet yaml-mode web-mode twig-mode tuareg restclient rainbow-mode projectile powerline phpunit php-mode pandoc pallet neotree nasm-mode multiple-cursors mouse+ monokai-theme minimap markdown-mode magit-gitflow js2-highlight-vars gist emojify emmet-mode composer cask-package-toolset cask-mode auto-complete-c-headers all-the-icons-dired ac-js2)))
  '(projectile-mode t nil (projectile))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)

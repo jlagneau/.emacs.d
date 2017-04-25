@@ -6,7 +6,7 @@
 ;    By: jlagneau </var/spool/mail/jlagneau>        +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2017/03/16 04:07:03 by jlagneau          #+#    #+#              ;
-;    Updated: 2017/04/08 22:55:02 by jlagneau         ###   ########.fr        ;
+;    Updated: 2017/04/26 00:19:44 by jlagneau         ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -32,15 +32,7 @@
 ;; Indenting
 (setq-default
  c-default-style "linux"
- c-basic-offset 4
- c-indent-level 4
- tab-width 4
- indent-tabs-mode nil
- c-tab-always-indent t
  backward-delete-function nil)
-
-;; Indent guides
-(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
 ;; Saves
 (add-hook 'before-save-hook 'whitespace-cleanup)
@@ -126,9 +118,6 @@
   (ansi-color-apply-on-region (point-min) (point-max)))
 (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
 
-;; Flycheck
-(add-hook 'after-init-hook #'global-flycheck-mode)
-
 ;; Assembly
 (require 'nasm-mode)
 (add-to-list 'auto-mode-alist '("\\.\\(asm\\|s\\)$" . nasm-mode))
@@ -136,33 +125,11 @@
 ;; C
 (defun my-c-cs ()
   "* My C Coding Style."
-  (setq indent-tabs-mode t)
   (setq whitespace-style
-        '(empty face trailing indentation lines-tail
-                space-before-tab space-after-tab)))
-
-(defun my-flycheck-c-project ()
-  "* Flycheck clang warning and informations."
-  (setq-default flycheck-clang-pedantic t)
-  (setq-default flycheck-clang-warnings (list "everything" "no-cast-qual" "no-unused-macros")))
-
-(defun my-flycheck-c-project-include ()
-  "* Flycheck clang includes directories paths."
-  (setq-default flycheck-clang-include-path
-        (list
-         (expand-file-name "../libft/include")
-         (expand-file-name "../include"))))
-
+        '(empty face indentation space-before-tab space-after-tab)))
 (add-hook 'c-mode-hook 'my-c-cs)
-(add-hook 'c-mode-hook 'my-flycheck-c-project)
-(add-hook 'c-mode-hook 'my-flycheck-c-project-include)
 
 ;; PHP
-(defun my-php-cs ()
-  "* My PHP Coding Style."
-  (setq whitespace-line-column 120))
-
-(add-hook 'php-mode-hook 'my-php-cs)
 (add-hook 'php-mode-hook 'php-enable-symfony2-coding-style)
 
 ;; JS
